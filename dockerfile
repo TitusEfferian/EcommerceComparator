@@ -8,6 +8,6 @@ COPY . .
 
 RUN npm install
 
-EXPOSE 3000
+EXPOSE 1234
 
 CMD ["node_modules/.bin/babel-node","index.js"]
