@@ -6,6 +6,7 @@ import tokopedia from './tokopedia/fetchDataTokopedia'
 const app = express()
 
 app.get('/api/v1/ecommerce/:product', async function (req, res, next) {
+    console.log('hitted',req.params)
     const data = []
     try{
         const search = await req.params.product
