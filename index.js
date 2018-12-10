@@ -12,14 +12,15 @@ app.get('/api/v1/ecommerce/:product', async function (req, res, next) {
         const search = await req.params.product
         const resultTokopedia = await tokopedia(search)
         const resultBukalapak = await bukalapak(search)
-        const resultBliBliCom = await bliblicom(search)
-        data.push(...resultTokopedia,...resultBukalapak,...resultBliBliCom)
-        console.log(resultTokopedia,resultBliBliCom,resultBukalapak)
-        console.log(data)
+        //const resultBliBliCom = await bliblicom(search)
+        //data.push(...resultTokopedia,...resultBukalapak,...resultBliBliCom)
+        //console.log(resultTokopedia,resultBliBliCom,resultBukalapak)
+        //console.log(data)
         /*data.sort((a, b) => parseInt(a.price) - parseInt(b.price))*/
         res.send({
             success:true,
-            data: data.sort((a, b) => parseInt(a.price) - parseInt(b.price))
+            //data: data.sort((a, b) => parseInt(a.price) - parseInt(b.price))
+            data:'hitted'
         })
     }
     catch(e){
